@@ -13,11 +13,15 @@
     }
   },
   "scripts": {
-    "check": "@php -l src/CapabilityPlugin.php"
+    "check": [
+      "@php -l src/CapabilityPlugin.php",
+      "@php -l src/CapabilityServiceProvider.php"
+    ]
   },
   "extra": {
     "liberu": {
       "name": "accounting-plaid-filament"
     }
-  }
+  },
+  "version": "0.1.0-alpha.0"
 }

@@ -14,7 +14,7 @@ Independent presentation module skeleton for **Accounting Plaid**. Intended boun
 
 ```bash
 composer install
-composer validate --strict
+composer validate --strict --no-check-version
 composer check
 ```
 
@@ -46,3 +46,11 @@ The companion repositories use the same canonical scope and preserve their own p
 ## Release boundary
 
 Build and inspect a packed artifact in a clean consumer before an authorized registry release. Keep prerelease/skeleton status until implemented behavior and supported runtimes are verified. Repository creation does not publish to Packagist, npm or pub.dev. Native signing and store distribution are separate application responsibilities.
+
+<!-- php-module-lifecycle:begin -->
+## Liberu module lifecycle
+
+`module.json` declares this presentation module, its autoloadable Laravel provider and the Filament plugin entry. The skeleton starts disabled and declares no implemented domain capabilities. The provider intentionally boots no business behavior; the host chooses installation, enablement and panel composition separately.
+
+The Composer and module manifests share the prerelease version `0.1.0-alpha.0`. Keep these versions aligned when preparing an authorized release. The explicit version follows the host module lifecycle contract; `--no-check-version` permits that field while retaining strict schema and lockfile checks. This source repository does not establish a Packagist release. Use the reviewed Liberu installer for `/modules` placement and retain Composer-generated autoloading.
+<!-- php-module-lifecycle:end -->
