@@ -1,0 +1,23 @@
+{
+  "name": "liberusoftware/boilerplate-filament",
+  "description": "Liberu reusable Filament presentation module foundation",
+  "type": "liberu-module",
+  "license": "MIT",
+  "require": {
+    "php": "^8.5",
+    "filament/filament": "^5.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "Liberu\\Presentation\\BoilerplateFilament\\": "src/"
+    }
+  },
+  "scripts": {
+    "check": "@php -l src/BoilerplatePlugin.php"
+  },
+  "extra": {
+    "liberu": {
+      "name": "boilerplate-filament"
+    }
+  }
+}
