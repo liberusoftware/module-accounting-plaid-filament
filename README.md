@@ -1,8 +1,16 @@
-# Laravel and Filament module foundation
+# Accounting Plaid · Laravel · Filament
 
-An independent Composer package skeleton for a Filament panel extension. It supplies a plugin lifecycle entry with a unique ID. It registers no pages, resources, routes, policies or domain behavior yet.
+Independent presentation module skeleton for **Accounting Plaid**. Intended boundary: php/composer laravel host with filament panels.
 
-## Develop
+**Status: skeleton.** This repository supplies package/build structure and an explicit extension entry. It is not a completed feature, production API integration or registry publication. Existing implementations and package identities remain authoritative.
+
+- Capability/source key: `liberusoftware/module-accounting-plaid`.
+- Presentation scope: [Accounting Plaid](https://github.com/liberusoftware/documentation/blob/main/projects/accounting/filament/accounting-plaid.md).
+- Canonical ownership record: [source/plan group](https://github.com/liberusoftware/documentation/blob/main/projects/accounting/nextjs/accounting-plaid.md).
+- Registry identity: `liberusoftware/accounting-plaid-filament`.
+- Foundation: [module-boilerplate-filament](https://github.com/liberusoftware/module-boilerplate-filament) at `9282e55622b1abd4db48da891480cd9cac46c158`.
+
+## Develop and verify
 
 ```bash
 composer install
@@ -10,8 +18,31 @@ composer validate --strict
 composer check
 ```
 
-The application explicitly registers `Liberu\Presentation\BoilerplateFilament\BoilerplatePlugin::make()` in its panel provider's plugins list. No global auto-discovery enables this module. The package uses the Liberu module type; configure and allow the reviewed Liberu Composer installer in the consuming host to manage placement under `/modules`, following the [Composer lifecycle](https://github.com/liberusoftware/documentation/blob/main/guides/COMPOSER.md). Select compatible canonical core packages and invoke their public actions/queries from reviewed resources, pages and widgets. Installation, enablement, entitlement and authorization are separate responsibilities.
+The public entry is `Liberu\Presentation\Capabilitya630a65c441a\CapabilityPlugin::make()`, registered explicitly by the consuming Filament panel. It supplies the plugin lifecycle and a unique ID; no resources, pages or domain behavior are registered yet. Configure the reviewed Liberu installer in the host for the declared module package type.
 
-When deriving a capability, change the Composer identity, PSR-4 namespace, class/plugin ID and repository URL. Keep host `App\` imports and private model access outside the library. Implement and verify allowed/denied/wrong-tenant journeys before claiming a capability is delivered.
+Use the committed locks and declared toolchain. Read [AGENTS.md](AGENTS.md) and the [presentation runbook](https://github.com/liberusoftware/documentation/blob/main/guides/presentation/README.md). Keep host routing, navigation, session integration and deployment outside reusable capability code. Keep Laravel policy, tenant context, validation, transactions, persistence and state transitions in the canonical owner. Do not infer endpoints or business DTOs from this registration descriptor.
 
-This repository is a template, not a published Packagist release. Read the [Filament standard](https://github.com/liberusoftware/documentation/blob/main/standards/FILAMENT.md), [module architecture](https://github.com/liberusoftware/documentation/blob/main/architecture/MODULES.md) and [source inventory](https://github.com/liberusoftware/documentation/blob/main/architecture/SOURCE-INVENTORY.md). Existing implementation packages retain their actual identities and remain separate from this skeleton.
+Implement reviewed loading, empty, denied, invalid, stale/conflict, pending and recoverable failure states when adding real workflows. Test meaningful allowed/denied/wrong-tenant behavior against the authoritative API or public action. Reconcile uncertain writes before retrying and clear scoped cached data on logout. For device targets, review lifecycle, secure storage and platform support; a local draft is not a completed server transaction.
+
+## Documented consumer project families
+
+These project skeletons belong to documented consumer scopes. Their presence does not prove integration or feature parity; review compatible core/API contracts before enabling this package.
+
+- [Accounting ERP](https://github.com/liberusoftware/project-accounting-erp-laravel-filament): Ledgers, tax, reporting and finance workflows.
+
+## Other presentations of this capability
+
+The companion repositories use the same canonical scope and preserve their own presentation lifecycle. Availability is recorded by the repository inventory; a repository link is not evidence of an implemented feature.
+
+- [Laravel · Inertia · Vue](https://github.com/liberusoftware/module-accounting-plaid-vue-inertia).
+- [Laravel · Inertia · React](https://github.com/liberusoftware/module-accounting-plaid-react-inertia).
+- [Nuxt · Vue](https://github.com/liberusoftware/module-accounting-plaid-nuxt).
+- [Next.js · React](https://github.com/liberusoftware/module-accounting-plaid-nextjs).
+- [React Native · Expo](https://github.com/liberusoftware/module-accounting-plaid-react-native).
+- [Flutter · Mobile](https://github.com/liberusoftware/module-accounting-plaid-flutter).
+- [Dart · Desktop](https://github.com/liberusoftware/module-accounting-plaid-dart-desktop).
+- [Dart · Mobile](https://github.com/liberusoftware/module-accounting-plaid-dart-mobile).
+
+## Release boundary
+
+Build and inspect a packed artifact in a clean consumer before an authorized registry release. Keep prerelease/skeleton status until implemented behavior and supported runtimes are verified. Repository creation does not publish to Packagist, npm or pub.dev. Native signing and store distribution are separate application responsibilities.

@@ -1,6 +1,6 @@
 {
-  "name": "liberusoftware/boilerplate-filament",
-  "description": "Liberu reusable Filament presentation module foundation",
+  "name": "liberusoftware/accounting-plaid-filament",
+  "description": "Accounting Plaid Filament presentation module skeleton",
   "type": "liberu-module",
   "license": "MIT",
   "require": {
@@ -9,15 +9,15 @@
   },
   "autoload": {
     "psr-4": {
-      "Liberu\\Presentation\\BoilerplateFilament\\": "src/"
+      "Liberu\\Presentation\\Capabilitya630a65c441a\\": "src/"
     }
   },
   "scripts": {
-    "check": "@php -l src/BoilerplatePlugin.php"
+    "check": "@php -l src/CapabilityPlugin.php"
   },
   "extra": {
     "liberu": {
-      "name": "boilerplate-filament"
+      "name": "accounting-plaid-filament"
     }
   }
 }

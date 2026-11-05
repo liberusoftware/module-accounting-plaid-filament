@@ -1,3 +1,3 @@
-# Foundation validation
+# Skeleton validation
 
-On 2026-11-05, Composer metadata validation, PHP syntax validation, standalone dependency installation and the Filament 5 plugin interface/lifecycle check passed. The plugin registers no resources yet. These checks establish the extension entry, not implemented domain behavior or protected journeys.
+Derived from `module-boilerplate-filament` at `9282e55622b1abd4db48da891480cd9cac46c158`. Generation checks the declared package identity and this runtime's source/manifest validity. It does not establish implemented capability behavior, consumer/API compatibility, physical-device behavior or a signed release. Run the README commands and record real integration evidence as implementation proceeds.
